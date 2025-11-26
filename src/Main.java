@@ -1,4 +1,4 @@
-import service.Employee;
+import service.entities.Employee;
 import service.PensionService;
 import service.SalaryService;
 import service.TaxService;

@@ -1,5 +1,7 @@
 package service;
 
+import service.entities.Employee;
+
 public class SalaryService {
 
     private final TaxService taxService;
