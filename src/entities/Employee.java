@@ -1,4 +1,4 @@
-package service.entities;
+package entities;
 
 public class Employee {
 

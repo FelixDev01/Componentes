@@ -1,6 +1,6 @@
 package service;
 
-import service.entities.Employee;
+import entities.Employee;
 
 public class SalaryService {
 

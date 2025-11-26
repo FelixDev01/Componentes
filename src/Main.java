@@ -1,4 +1,5 @@
-import service.entities.Employee;
+import entities.Employee;
+import service.BrazilTaxService;
 import service.PensionService;
 import service.SalaryService;
 import service.TaxService;
@@ -14,7 +15,7 @@ public class Main {
         System.out.println("Digite o salario bruto desse funcionario: ");
         Double grossSalary = scanner.nextDouble();
 
-        TaxService taxService = new TaxService();
+        TaxService taxService = new BrazilTaxService();
         PensionService pensionService = new PensionService();
         SalaryService salaryService = new SalaryService(taxService, pensionService);
 
