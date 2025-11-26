@@ -1,4 +1,6 @@
+import service.Employee;
 import service.PensionService;
+import service.SalaryService;
 import service.TaxService;
 
 import java.util.Scanner;
@@ -6,11 +8,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o nome do funcionario: ");
+        String name = scanner.next();
+        System.out.println("Digite o salario bruto desse funcionario: ");
+        Double grossSalary = scanner.nextDouble();
+
         TaxService taxService = new TaxService();
         PensionService pensionService = new PensionService();
+        SalaryService salaryService = new SalaryService(taxService, pensionService);
 
-        System.out.println(taxService.tax(4000));
-        System.out.println(pensionService.discount(4000));
+        Employee employee = new Employee(grossSalary, name);
+
+        double netSalary = salaryService.netSalary(employee);
+        System.out.println("Salario liquido: " + netSalary);
 
     }
 }
